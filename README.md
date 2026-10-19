@@ -12,7 +12,7 @@ Programa de linha de comando em Python que "esconde" uma mensagem de texto dentr
 
 ## Como funciona
 
-*Codificador*
+### Codificador
 Cada pixel da imagem tem três canais (R, G e B), e cada canal guarda um valor de 0 a 255. O programa troca apenas o **bit menos significativo** de cada canal por um bit da mensagem, o que altera a cor em no máximo 1 unidade e é imperceptível a olho nu.
 
 Os bits são gravados nesta ordem, pixel a pixel (da esquerda para a direita, de cima para baixo), canal R, G e B de cada pixel:
@@ -24,7 +24,7 @@ Capacidade em bits: uma imagem com **largura * altura** pixels comporta **largur
 
 Capacidade em caracteres: uma imagem com **largura * altura * 3 - 32** bits ÷ 8 é a quantidade máxima de caracteres comportados.
 
-*Decodificador*
+### Decodificador
 O decodificador irá ler os 32 primeiros bits para obter o tamanho N da mensagem, a partir disso lê-se os N canais seguintes e agrupa de 8 em 8 bits,
 convertendo cada grupo de 8 bits (um byte) em caractere. 
 ## Requisitos
