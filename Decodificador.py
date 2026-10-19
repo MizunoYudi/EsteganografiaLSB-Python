@@ -2,7 +2,7 @@ import PIL.Image as pimage
 import numpy as np
 
 def LerMensagemPorLSB(imagem):
-    pimagem = pimage.open("novaImagem.png")
+    pimagem = pimage.open(imagem)
     pimagem = pimagem.convert("RGB")
     pixels = np.array(pimagem.getdata())
 
