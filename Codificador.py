@@ -27,6 +27,8 @@ def EsconderPorLSB(mensagem, imagem):
                 pixels[pixel][canal] -= 1
         pimagemcopia = pimagem.copy()
         pimagemcopia.putdata(tuple(map(tuple, pixels)))
-        pimagemcopia.save(plib.Path(imagem).stem+"-codificado"+plib.Path(imagem).suffix)
+        nomeArquivoLSB = plib.Path(imagem).stem+"-codificado"+plib.Path(imagem).suffix
+        pimagemcopia.save(nomeArquivoLSB)
+        print('Imagem salva com o nome: "' + nomeArquivoLSB + '"')
     else:
         print("A mensagem não cabe na imagem")
